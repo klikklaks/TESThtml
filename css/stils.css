@@ -35,6 +35,14 @@
     font-size: 12px;
     letter-spacing: 5px;
   }
+  .sticky{
+      position: fixed;
+      top: 0;
+      width: 100%;
+  }
+  .sticky + .content {
+      padding-top:60px;
+  }
   .navbar-nav  li a:hover {
     color: #1abc9c !important;
   }
