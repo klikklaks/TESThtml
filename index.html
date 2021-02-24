@@ -9,24 +9,13 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script>
-      window.onscroll = function(){myFunction()};
-      var navbar=document.getElementById("navbar");
-      var sticky=navbar.offsetTop;
-      function myFunction(){
-          if(window.pageYOffset>=sticky){
-          navbar.classList.add("sticky")
-      }else{
-          navbar.classList.remove("sticky");
-      }
-      }
-      </script>
+
     
 </head>
 <body>
     <a href="laukums.html">JavaScript</a>
 
-<nav class="navbar navbar-default">
+<nav id="navbar" class="navbar navbar-default content">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -84,6 +73,18 @@
 <footer class="container-fluid bg-4 text-center">
   <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
 </footer>
-
+  <script>
+      window.onscroll = function(){myFunction();};
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+      console.log(sticky);
+      function myFunction(){
+          if(window.pageYOffset>=sticky){
+          navbar.classList.add("sticky");
+      }else{
+          navbar.classList.remove("sticky");
+      }
+      }
+      </script>
 </body>
 </html>
