@@ -31,29 +31,30 @@ function g(){
             
   document.getElementById("divtags").appendChild(x);
     let y=document.createElement("img");
-    var bildes = new Array(4*4);
+    var bildes = new Array(n*n);
     for(let z=0; z<1; z){
     let  r=Math.floor(Math.random()*Math.floor(7))+1;
-    function parbaude(){
-        var z=0;
-     for(let g=0; g<n;g++){
-         for(let k=0; k<n; k++){
-             if(r===bildes[g][k]){
-                 z=z+1;
-                 
+console.log(r);
+        var k=0;
+     for(let g=0; g<n*n;g++){
+             if(r===bildes[g]){
+                 k=k+1;
+                 console.log(k);
              }
-         }
-         if(z<2){return true;}
-     }   
-    }
+     }
+     if(k<2){return parbaude = true;}
+         else{return parbaude = false;}
+    
+    console.log(parbaude());
     if(parbaude){
-    bildes[f][i]=r;
-    console.log(r);
+    bildes[i*n+f]=r;
+    //console.log(r);
 
     
          y.src="images/b"+r+".jpg";
     x.appendChild(y);  
-}z=z+1;
+    z=z+1;
+}
     }
    
         }
