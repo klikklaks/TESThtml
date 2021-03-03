@@ -1,4 +1,5 @@
 var executed = false;
+var parbaude = true;
 function f(){
     
     if(!executed){
@@ -30,9 +31,31 @@ function g(){
             
   document.getElementById("divtags").appendChild(x);
     let y=document.createElement("img");
-   // let r=Math.random(7)+1;
-         y.src="images/b1.jpg";
-    x.appendChild(y);     
+    var bildes = new Array(4*4);
+    for(let z=0; z<1; z){
+    let  r=Math.floor(Math.random()*Math.floor(7))+1;
+    function parbaude(){
+        var z=0;
+     for(let g=0; g<n;g++){
+         for(let k=0; k<n; k++){
+             if(r===bildes[g][k]){
+                 z=z+1;
+                 
+             }
+         }
+         if(z<2){return true;}
+     }   
+    }
+    if(parbaude){
+    bildes[f][i]=r;
+    console.log(r);
+
+    
+         y.src="images/b"+r+".jpg";
+    x.appendChild(y);  
+}z=z+1;
+    }
+   
         }
     }
 executed = true;
