@@ -7,7 +7,6 @@ function f(){
     var n=document.getElementById("nosaukums").value;
     
     for(let i=0; i<n;i++){
-        var matem=0;
         var y=document.createElement("br");
         document.getElementById("divtags").appendChild(y);
         for(let f=0; f<n;f++){
@@ -17,5 +16,25 @@ function f(){
         }
     }
     executed = true;
+    }
+}
+function g(){
+    if(!executed){
+    var n=4;
+    
+    for(let i=0; i<n;i++){
+        var y=document.createElement("br");
+        document.getElementById("divtags").appendChild(y);
+        for(let f=0; f<n;f++){
+            let x=document.createElement("button");
+            
+  document.getElementById("divtags").appendChild(x);
+    let y=document.createElement("img");
+   // let r=Math.random(7)+1;
+         y.src="images/b1.jpg";
+    x.appendChild(y);     
+        }
+    }
+executed = true;
     }
 }
